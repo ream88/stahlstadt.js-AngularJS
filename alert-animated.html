@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="Alert">
+<head>
+  <meta charset="UTF-8">
+  <title>Alert Animated</title>
+
+  <style>
+    .alert {
+      margin: 100px;
+      padding: 10px 20px;
+
+      background-color: #D74146;
+      color: white;
+      font-family: "Lucida Grande", sans-serif;
+      font-size: 12px;
+    }
+
+    a {
+      float: right;
+
+      color: white;
+      text-decoration: none;
+    }
+
+    .fade {
+      transition: opacity 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+
+    .fade.ng-enter {
+      opacity: 0;
+    }
+
+    .fade.ng-enter.ng-enter-active {
+      opacity: 1;
+    }
+
+    .fade.ng-hide-add {
+      display: block !important;
+      opacity: 1;
+    }
+
+    .fade.ng-hide-add.ng-hide-add-active {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="alert fade" ng-hide="hidden">
+    I'm sorry Mario, I'm afraid you can't do that.
+
+    <a href="#" ng-click="hidden = true">&times;</a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.min.js"></script>
+
+  <script>
+    angular.module('Alert', ['ngAnimate'])
+  </script>
+</body>
+</html>

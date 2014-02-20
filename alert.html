@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>Alert</title>
+
+  <style>
+    .alert {
+      margin: 100px;
+      padding: 10px 20px;
+
+      background-color: #D74146;
+      color: white;
+      font-family: "Lucida Grande", sans-serif;
+      font-size: 12px;
+    }
+
+    a {
+      float: right;
+
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="alert" ng-hide="hidden">
+    I'm sorry Mario, I'm afraid you can't do that.
+
+    <a href="#" ng-click="hidden = true">&times;</a>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.min.js"></script>
+</body>
+</html>
